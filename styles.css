@@ -1,0 +1,96 @@
+:root {
+    /* declare css variables */
+    --sun-radius: 50px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sky {
+    flex: 1 0 70%;
+    background: #2f2fed7a;
+
+    position: relative;
+    z-index: 0;
+}
+
+.info-bar {
+    display: inline-flex;
+    gap: 20px;
+    padding: 10px 20px;
+    margin: 10px;
+
+    background: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 0 15px 5px black;
+}
+
+.info-bar > ul > li {
+    display: block;
+}
+
+.info-bar__names {
+    cursor: pointer;
+}
+
+.ground {
+    flex: 1 0 30%;
+    background: darkgreen;
+    position: relative;
+    z-index: 100;
+}
+
+.sun {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0.5;
+    background: orange;
+    border-radius: 50%;
+
+    height: calc(3 * var(--sun-radius));
+    width: calc(3 * var(--sun-radius));
+    bottom: calc(-3 * var(--sun-radius));
+    left: 0;
+}
+
+.stick {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+
+    height: 100px;
+    width: 5px;
+    background: black;
+}
+
+.stick-shadow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    width: 5px;
+    height: 90px;
+
+    background: black;
+    opacity: 0.6;
+
+    transform: rotateZ(-90deg);
+    transform-origin: top;
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Namaz time</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <header class="sky">
+        <div class="info-bar">
+            <ul class="info-bar__names">
+                <li title="Длина предмета, поставленного перпендикулярно к поверхности">Длина предмета:</li>
+                <li title="Длина тени предмета в зависимости от положения солнца">Текущая длина тени:</li>
+                <li title="Длина тени предмета, когда солнце находится в зените">Длина тени в зените:</li>
+                <li title="Длина тени в зените плюс длина предмета">Длина тени по Шафи:</li>
+                <li title="Длина тени в зените плюс две длины предмета">Длина тени по Ханафи:</li>
+            </ul>
+
+            <ul class="info-bar__values">
+                <li id="subject-length">0 м</li>
+                <li id="current-shadow-length">0 м</li>
+                <li id="zenith-shadow-length">0 м</li>
+                <li id="shafi-shadow-length">0 м</li>
+                <li id="hanafi-shadow-length">0 м</li>
+            </ul>
+        </div>
+        <div class="sun" id="sun"></div>
+    </header>
+    <main class="ground">
+        <div class="stick" id="stick"></div>
+        <div class="stick-shadow" id="stick-shadow"></div>
+    </main>
+</body>
+</html>
