@@ -155,4 +155,25 @@ document.addEventListener('DOMContentLoaded', () => {
         // positive scroll down, negative scroll up
         system.draw(event.deltaY);
     });
+
+    (() => {
+        let previousY = 0;
+        document.addEventListener('touchstart', (event) => {
+            previousY = event.changedTouches[0].clientY;
+        });
+
+        document.addEventListener('touchmove', (event) => {
+            const currentY = event.changedTouches[0].clientY;
+            system.draw(previousY - currentY);
+            previousY = currentY;
+        });
+    })()
+
+
+
+
+    //
+    // document.addEventListener('touchend', (event) => {
+    //     console.log(event);
+    // });
 });
